@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes, ou simplesmente diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto_P.jpg" type="image/jpg">
+        <source media="(max-width: 1050px)" srcset="imagens/foto_M.jpg" type="image/png">
+        <img src="./imagens/foto_G.jpg" alt="g">
+    </picture>
+
+
+    <h1>Reproduzindo audio</h1>
+    <p>Aprendendo a reproduzir audios em HTML5:</p>
+   
+    <!-- MP3 WAV OGG -->
+    <audio preload="metadata" loop autoplay controls >
+        <source src="midia/tuesday.mp3" type="audio/mpeg">
+        <!-- SE O NAVEGADOR EM QUESTAO NÃO SUPORTAR MP3, A OPÇÃO DAS CONFIGURAÇÕES PASSA PARA O DE BAIXO-->
+        <source src="midia/tuesday.ogg" type="audio/ogg">
+        <!-- SE O NAVEGADOR EM QUESTAO NÃO SUPORTAR OGG, A OPÇÃO DAS CONFIGURAÇÕES PASSA PARA O DE BAIXO-->
+        <source src="midia/tuesday.wav" type="audio/wav">
+        <!-- WAV É PESADISSIMO, PROCURE UTILIZAR AS DUAS OPÇÕES DE CIMA, 1°MP3 DPS OGG-->
+        <p>Infelizmente seu navegador não consegue reproduzir este vídeo em específico, <a href="midia/tuesday.mp3">clique aqui para baixar o arquivo MP3.</a></p>
+    </audio>
+
+</body>
+
+</html>
